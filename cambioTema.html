@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cambio Tema</title>
+        <style>
+            :root {
+                --c1C: #ffffff;
+                --c1O: #2c2c2c;
+            }
+
+            body.claro {
+                --c1: var(--c1C);
+            }
+
+            body.oscuro {
+                --c1: var(--c1O);
+            }
+
+            body {
+                background-color: var(--c1);
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            document.body.classList.add(getCookie('tema') != ''? getCookie('tema') : 'claro');
+
+            function cambiarTema() {
+                let temaN = document.body.classList.contains('claro')? 'oscuro' : 'claro';
+                
+                document.body.classList.remove('claro', 'oscuro');
+                document.body.classList.add(temaN);
+                
+                setCookie('tema', temaN, 7);
+            }
+
+            function setCookie(clave, valor, dias) {
+                let fechaActual = new Date();
+                fechaActual.setTime(fechaActual.getTime() + (dias * 24 * 60 * 60 * 1000));
+
+                let fechaExpiracion = "expires=" + fechaActual.toUTCString();
+                document.cookie = clave + "=" + valor + ";" + fechaExpiracion + ";path=/";
+            }
+
+            function getCookie(clave) {
+                let nombre = clave + "=";
+                let cookies = document.cookie.split(';');
+                for(let i = 0; i < cookies.length; i++) {
+                    let c = cookies[i];
+                    while (c.charAt(0) == ' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(nombre) == 0) {
+                        return c.substring(nombre.length, c.length);
+                    }
+                }
+                return "";
+            }
+        </script>
+        <button onclick="cambiarTema()">&#x25D1;</button>
+    </body>
+</html>

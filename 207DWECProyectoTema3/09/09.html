@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <title>09</title>
+        <style>
+            div {
+                width: fit-content;
+                padding: 10px;
+                margin: 10px;
+                border: 1px solid black;
+            }
+                div div {
+                    padding: 20px;
+                    border-radius: 20px;
+                }
+                #rojo {
+                    background-color: #800000;
+                }
+                #amarillo {
+                    background-color: #808000;
+                }
+                #verde {
+                    background-color: #008000;
+                }
+        </style>
+    </head>
+    <body>
+        <script src="09.js"></script>
+        <div>
+            <div id="rojo"></div>
+            <div id="amarillo"></div>
+            <div id="verde"></div>
+        </div>
+        <button onclick="pasar()">Siguiente paso</button>
+        <button onclick="continuar()">Ciclo continuo</button>
+        <button onclick="parar()">Parar</button>
+    </body>
+</html>

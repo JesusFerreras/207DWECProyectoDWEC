@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>07</title>
+        <style>
+            .oculto {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="seleccion">
+            <label for="radio1">Incidencia informática</label>
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio2">Cambiar password</label>
+            <input type="radio" name="radio" id="radio2">
+        </div>
+        <form id="incidencias" action="" class="oculto">
+            <h2>Formulario de Incidencias Informáticas</h2>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre"><br>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos"><br>
+            <label for="direccion">Dirección</label>
+            <input type="text" name="direccion" id="direccion"><br>
+            <label for="telefono">Teléfono</label>
+            <input type="text" name="telefono" id="telefono"><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <form id="cambio" action="" class="oculto">
+            <h2>Formulario de Cambio de Password</h2>
+            <ul>
+                <li>Al menos un nº 0-9</li>
+                <li>Al menos una letra minúscula a-z</li>
+                <li>Al menos una letra mayúscula A-Z</li>
+                <li>Al menos un caracter especial: !@#\$%\^&\*</li>
+                <li>Al menos 8 caracteres y menos de 16 caracteres</li>
+            </ul>
+            <label for="antigua">Contraseña antigua</label>
+            <input type="password" name="antigua" id="antigua"><br>
+            <label for="nueva">Contraseña nueva</label>
+            <input type="password" name="nueva" id="nueva"><br>
+            <label for="nuevaR">Repetir contraseña nueva</label>
+            <input type="password" name="nuevaR" id="nuevaR"><br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <script src="07.js"></script>
+    </body>
+</html>

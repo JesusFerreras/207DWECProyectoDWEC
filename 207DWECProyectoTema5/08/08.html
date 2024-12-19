@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <title>08</title>
+        <style>
+            div#teclado {
+                display: flex;
+                width: 300px;
+                height: fit-content;
+                flex-flow: row wrap;
+                gap: 5px;
+            }
+                div#teclado > div {
+                    display: flex;
+                    width: 30%;
+                    height: 20%;
+                    background-color: #dddddd;
+                    align-items: center;
+                    justify-content: center;
+                }
+                div#teclado > div:hover {
+                    cursor: pointer;
+                }
+        </style>
+    </head>
+    <body>
+        <div id="codigo"></div>
+        <div id="teclado"></div>
+        <input type="text" id="texto" readonly>
+        <button id="validar">Validar</button>
+        <button id="reiniciar">Reiniciar</button>
+        <p id="resultado"></p>
+        <script src="08.js"></script>
+    </body>
+</html>

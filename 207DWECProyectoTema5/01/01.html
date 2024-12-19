@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <title>01</title>
+        <style>
+            body>div {
+                background-color: #01ffff;
+                width: 20%;
+                display: inline-block;
+                margin: 8px;
+                padding: 8px;
+            }
+                body>div>* {
+                    display: block;
+                    background-color: #f5f5dc;
+                    margin: 8px;
+                    padding: 8px;
+                }
+                    body>div>*>* {
+                        display: block;
+                        background-color: #01ffff;
+                        padding: 8px;
+                        margin: 8px;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <p id="p11">Fase burbuja</p>
+            <div id="div11">
+                <p id="p12"></p>
+            </div>
+        </div>
+        <div id="div2">
+            <p id="p21">Fase captura</p>
+            <div id="div21">
+                <p id="p22"></p>
+            </div>
+        </div>
+        <div id="div3">
+            <p id="p31">Anulación de eventos</p>
+            <div id="div31">
+                <p id="p32"></p>
+            </div>
+        </div><br>
+        <div id="div4">
+            <button id="activar">Activar</button>
+            <button id="b01">b01</button>
+            <button id="b02">b02</button>
+            <button id="b03">b03</button>
+            <button id="desactivar">Desactivar</button>
+        </div>
+        <script src="01.js"></script>
+    </body>
+</html>

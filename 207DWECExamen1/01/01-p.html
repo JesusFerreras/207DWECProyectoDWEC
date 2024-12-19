@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <title>01-p</title>
+        <style>
+            #semaforo {
+                width: fit-content;
+                padding: 10px;
+                margin: 10px;
+                background-color: black;
+            }
+                #semaforo div {
+                    padding: 20px;
+                    border-radius: 20px;
+                    margin: 5px;
+                }
+                #luzR {
+                    background-color: #800000;
+                }
+                #luzY {
+                    background-color: #808000;
+                }
+                #luzG {
+                    background-color: #008000;
+                }
+        </style>
+    </head>
+    <body>
+        <button id="crear">Crea tu semáforo</button>
+        <h1>Mi semáforo</h1>
+        <button id="btnG">Bombilla verde</button>
+        <button id="btnY">Bombilla amarilla</button>
+        <button id="btnR">Bombilla roja</button><br>
+        <input type="text" name="contrasena" id="contrasena">
+        <label for="contrasena">Teclea un password válido para encender el semáforo</label>
+        <p>El formato del password deberá ser: 3-6 caracteres alfanuméricos, seguidos de un símbolo especial de la lista (@#~%&/$), seguido de otros 3-6 caracteres alfanuméricos</p>
+        <button id="abrir">Abre ventana hija</button>
+        <button id="cerrar">Cierra ventana hija</button>
+        <script src="01-p.js"></script>
+    </body>
+</html>
