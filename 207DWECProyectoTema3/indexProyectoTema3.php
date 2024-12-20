@@ -11,8 +11,8 @@
         <header>
             <h1>Tema 3: Objetos, funciones y estructuras de datos</h1>
             <div>
-                <a href="../207DWESProyectoTema2/indexProyectoTema2.php">&#10094; Anterior</a>
-                <a href="../207DWESProyectoTema4/indexProyectoTema4.php">Siguiente &#10095;</a>
+                <a href="../207DWECProyectoTema2/indexProyectoTema2.php">&#10094; Anterior</a>
+                <a href="../207DWECProyectoTema4/indexProyectoTema4.php">Siguiente &#10095;</a>
             </div>
         </header>
         <main>
@@ -42,18 +42,16 @@
                         '16' => 'Programa "Encriptación de un mensaje"'
                     ];
 
-                    if ($handle = scandir('.')) {
-                        foreach ($handle as $entry) {
-                            if (preg_match('/^[0-9]+$/', $entry)) {
-                                $fichero = $entry.'/'.$entry.'.html';
-                                print(<<<FIN
-                                    <tr>
-                                        <td>$entry</td>
-                                        <td>$enunciados[$entry]</td>
-                                        <td><a href="$fichero">&#x25B6;</a></td>
-                                    </tr>
-                                FIN);
-                            }
+                    foreach (scandir('.') as $entry) {
+                        if (preg_match('/^[0-9]+$/', $entry)) {
+                            $fichero = $entry.'/'.$entry.'.html';
+                            print(<<<FIN
+                                <tr>
+                                    <td>$entry</td>
+                                    <td>$enunciados[$entry]</td>
+                                    <td><a href="$fichero">&#x25B6;</a></td>
+                                </tr>
+                            FIN);
                         }
                     }
                 ?>
@@ -61,8 +59,8 @@
         </main>
         <footer>
             <a href="../../index.html">Jesús Ferreras González</a>
-            <a href="..//indexProyectoDWEC.php">DWEC</a>
-            <a href="https://github.com/JesusFerreras/207DWECProyectoDWEC.git" target="_blank"><img src="doc/github.png" alt="github"></a>
+            <a href="../indexProyectoDWEC.php">DWEC</a>
+            <a href="https://github.com/JesusFerreras/207DWECProyectoDWEC.git" target="_blank"><img src="../doc/github.png" alt="github"></a>
         </footer>
     </body>
 </html>

@@ -11,8 +11,8 @@
         <header>
             <h1>Tema 2: Manejo de la sintaxis del lenguaje</h1>
             <div>
-                <a href="../207DWESProyectoTema1/indexProyectoTema1.php">&#10094; Anterior</a>
-                <a href="../207DWESProyectoTema3/indexProyectoTema3.php">Siguiente &#10095;</a>
+                <a href="../207DWECProyectoTema1/indexProyectoTema1.php">&#10094; Anterior</a>
+                <a href="../207DWECProyectoTema3/indexProyectoTema3.php">Siguiente &#10095;</a>
             </div>
         </header>
         <main>
@@ -35,18 +35,16 @@
                         '09' => 'Programa "Adivina el Número"'
                     ];
 
-                    if ($handle = scandir('.')) {
-                        foreach ($handle as $entry) {
-                            if (preg_match('/^[0-9]+$/', $entry)) {
-                                $fichero = $entry.'/'.$entry.'.html';
-                                print(<<<FIN
-                                    <tr>
-                                        <td>$entry</td>
-                                        <td>$enunciados[$entry]</td>
-                                        <td><a href="$fichero">&#x25B6;</a></td>
-                                    </tr>
-                                FIN);
-                            }
+                    foreach (scandir('.') as $entry) {
+                        if (preg_match('/^[0-9]+$/', $entry)) {
+                            $fichero = $entry.'/'.$entry.'.html';
+                            print(<<<FIN
+                                <tr>
+                                    <td>$entry</td>
+                                    <td>$enunciados[$entry]</td>
+                                    <td><a href="$fichero">&#x25B6;</a></td>
+                                </tr>
+                            FIN);
                         }
                     }
                 ?>
@@ -54,8 +52,8 @@
         </main>
         <footer>
             <a href="../../index.html">Jesús Ferreras González</a>
-            <a href="..//indexProyectoDWEC.php">DWEC</a>
-            <a href="https://github.com/JesusFerreras/207DWECProyectoDWEC.git" target="_blank"><img src="doc/github.png" alt="github"></a>
+            <a href="../indexProyectoDWEC.php">DWEC</a>
+            <a href="https://github.com/JesusFerreras/207DWECProyectoDWEC.git" target="_blank"><img src="../doc/github.png" alt="github"></a>
         </footer>
     </body>
 </html>

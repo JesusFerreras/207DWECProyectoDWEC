@@ -19,19 +19,31 @@
                         '207DWECProyectoTema2' => 'Tema 2: Manejo de la sintaxis del lenguaje',
                         '207DWECProyectoTema3' => 'Tema 3: Objetos, funciones y estructuras de datos',
                         '207DWECProyectoTema4' => 'Tema 4: Modelo de objetos del documento (DOM y BOM)',
-                        '207DWECProyectoTema5' => 'Tema 5: Interacción con el usuario, eventos y formularios',
-                        '207DWECExamen1' => 'Examen 1: '
+                        '207DWECProyectoTema5' => 'Tema 5: Interacción con el usuario, eventos y formularios'
                     ];
 
-                    if ($handle = scandir('.')) {
-                        foreach ($handle as $entry) {
-                            if (substr($entry, 0, 7) == '207DWEC') {
+                    foreach (scandir('.') as $entry) {
+                        if (substr($entry, 0, 7) == '207DWEC') {
+                            if (substr($entry, 7, 6) == 'Examen') {
+                                print('<h3>Exámenes</h3><ul>');
+                                foreach (scandir($entry) as $value) {
+                                    if ($value != '.' && $value != '..') {
+                                        print(<<<FIN
+                                            <li>
+                                                <a href="$entry/$value/$value.html">Examen $value</a>
+                                            </li>
+                                        FIN);
+                                    }
+                                }
+                                print('</ul>');
+                            } else {
                                 $fichero = 'index'.substr($entry, 7).'.php';
+                                $num = substr($entry, -1);
                                 print(<<<FIN
                                     <h3>$titulos[$entry]</h3>
                                     <ul>
                                         <li>
-                                            <a href="$entry/$fichero">Ejercicios</a>
+                                            <a href="$entry/$fichero">Ejercicios Tema $num</a>
                                         </li>
                                     </ul>
                                 FIN);
