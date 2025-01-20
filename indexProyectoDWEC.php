@@ -19,7 +19,10 @@
                         '207DWECProyectoTema2' => 'Tema 2: Manejo de la sintaxis del lenguaje',
                         '207DWECProyectoTema3' => 'Tema 3: Objetos, funciones y estructuras de datos',
                         '207DWECProyectoTema4' => 'Tema 4: Modelo de objetos del documento (DOM y BOM)',
-                        '207DWECProyectoTema5' => 'Tema 5: Interacción con el usuario, eventos y formularios'
+                        '207DWECProyectoTema5' => 'Tema 5: Interacción con el usuario, eventos y formularios',
+                        '207DWECProyectoTema6' => 'Tema 6: Comunicación asíncrona y solicitudes de red',
+                        '207DWECProyectoTema7' => 'Tema 7: TypeScript',
+                        '207DWECProyectoTema8' => 'Tema 8: VUE Framework'
                     ];
 
                     foreach (scandir('.') as $entry) {

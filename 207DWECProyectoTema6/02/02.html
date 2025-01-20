@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>02</title>
+    </head>
+    <body>
+        <input type="text" name="tiempo" id="tiempo">
+        <button id="boton">Ejecutar</button>
+        <p id="resultado"></p>
+    </body>
+    <script type="module">
+        import {cuentaAtras} from "./02.js";
+        
+        document.getElementById("boton").addEventListener("click",() => {
+            cuentaAtras(
+                document.getElementById("tiempo").value,
+                document.getElementById("resultado"),
+                1000
+            );
+        });
+    </script>
+</html>

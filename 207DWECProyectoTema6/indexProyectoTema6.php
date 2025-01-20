@@ -5,14 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Jesús Ferreras">
         <link rel="stylesheet" href="../webroot/css/estilos.css">
-        <title>DWEC Tema 5</title>
+        <title>DWEC Tema 6</title>
     </head>
     <body>
         <header>
-            <h1>Tema 5: Interacción con el usuario, eventos y formularios</h1>
+            <h1>Tema 6: Comunicación asíncrona y solicitudes de red</h1>
             <div>
-                <a href="../207DWECProyectoTema4/indexProyectoTema4.php">&#10094; Anterior</a>
-                <a href="../207DWECProyectoTema6/indexProyectoTema6.php">Siguiente &#10095;</a>
+                <a href="../207DWECProyectoTema5/indexProyectoTema5.php">&#10094; Anterior</a>
+                <a href="">Siguiente &#10095;</a>
             </div>
         </header>
         <main>
@@ -24,14 +24,16 @@
                 </tr>
                 <?php
                     $enunciados = [
-                        '01' => 'Pruebas con eventos I',
-                        '02' => 'Pruebas con eventos II',
-                        '03' => 'Pruebas con eventos de ratón y teclado',
-                        '04' => 'Pruebas con eventos de reproducción de multimedia',
-                        '05' => 'Pruebas con eventos de arrastre',
-                        '06' => 'Pruebas con eventos de formulario I',
-                        '07' => 'Pruebas con eventos de formulario II',
-                        '08' => 'Pruebas con eventos III'
+                        '01' => 'Pruebas con promesas I',
+                        '02' => 'Pruebas con promesas II',
+                        '03' => 'Pruebas con Fetch I',
+                        '04' => 'Pruebas con Fetch II',
+                        '05' => 'Pruebas con Fetch III',
+                        '06' => 'Pruebas con Fetch VI',
+                        '07' => 'Pruebas con Fetch V',
+                        '08' => 'Pruebas con Fetch VI',
+                        '09' => 'Pruebas con Leaflet',
+                        '10' => 'Pruebas con Cookies'
                     ];
 
                     foreach (scandir('.') as $entry) {
