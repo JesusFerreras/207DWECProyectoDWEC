@@ -2,11 +2,15 @@ mostrarImagen();
 
 
 async function mostrarImagen() {
-    let salida = document.getElementById("imagen");
-    let respuesta = await fetch("https://source.unsplash.com/random");
-    if (!respuesta.ok) {
-        salida.setAttribute("alt", respuesta.status);
-    } else {
-        salida.setAttribute("src", URL.createObjectURL(await respuesta.blob()));
+    try {
+        let salida = document.getElementById("imagen");
+        let respuesta = await fetch("https://picsum.photos/200/300");
+        
+        if (respuesta.ok) {
+            salida.setAttribute("src", URL.createObjectURL(await respuesta.blob()));
+            salida.setAttribute("alt", respuesta.status);
+        }
+    } catch (error) {
+        console.log(error.message);
     }
 }

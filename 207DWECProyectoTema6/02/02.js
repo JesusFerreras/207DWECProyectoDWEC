@@ -10,7 +10,7 @@ function crearTemporizador(tiempo) {
         }, tiempo*2);
     });
 
-    return promesa
+    return promesa;
 }
 
 export async function cuentaAtras(inicio, elemento, intervalo) {
